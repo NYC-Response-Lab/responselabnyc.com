@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+
+{% block page_content %}
+
+        <div class="page-header--agency" data-padding data-bg="template" style="background-image:url('./assets/img/splash.jpg'); background-size: cover;">
+            <div class="container">
+                <div class="row align-items-md-center">
+                    <div class="col-12 col-md-6 col-xl-5">
+                        <div class="sectiontitle-element--light">
+                            <h1 class="big">Projects</h1>
+                            <p class="lg">A few projects we are currently involved in:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END Page Header  -->
+        <!--  Page Content  -->
+
+{% set projects = [ {'title': 'Community COVID Check-up (Redhook)',
+                 'image': 'covid-redhook.png',
+                 'description': 'The Red Hook Initiative has begun and is scaling up a digital phone bank to identify local residents with symptoms of COVID-19.',
+                 'url': ''},
+                { 'title': 'PPE Marketplace',
+                  'image': 'ppe-marketplace.jpg',
+                  'description': 'The PPE Marketplace facilitates the protective personal equipmen (PPE) purchases between NYC-based businesses following NYC EDC\'s public solicitation.',
+                  'url': 'https://ppe-marketplace.nyc'},
+                { 'title': 'Brownsville Public Sentiment',
+                   'image': 'brownsville.jpg',
+                   'description': 'More info coming soon.',
+                   'url': '#'}
+                  ] %}
+
+        <div class="projects page-content">
+            <!--  Articles  -->
+            <section data-padding>
+                <div class="container">
+                    <div data-aos="fade" class="row">
+                        <div class="col-12">
+                        </div>
+                    </div>
+        
+                    <div class="row" data-padding="xstop">
+
+                        {% for project in projects %}
+                        <!--  Single Article  -->
+                        <div data-aos="fade" data-aos-delay="100" class="col-12 col-md-4">
+                            <article class="rectangle-element--article--boxed--shadow">
+                                <div class="info">
+                                    <div class="image">
+                                        <img src="assets/img/projects/{{project.image}}" alt="{{project.title}}">
+                                    </div>
+                                    <div class="text">
+                                        <h3>{{project.title}}</h3>
+                                        <p>{{project.description}}</p>
+                                    </div>
+                                </div>
+                                <a href="{{project.url}}" class="link"></a>
+                            </article>
+                        </div>
+                        {% endfor %}
+ 
+                    </div>
+                </div>
+            </section>
+            <!--  END Articles  -->
+        </div>
+        <!--  END Page Content  -->
+
+{% endblock %}
