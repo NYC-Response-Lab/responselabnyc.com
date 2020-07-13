@@ -66,21 +66,21 @@
                     </div>
                     <!--  END Header Logo  -->
                     <!--  Menu  -->
+
+                    {% set nav = [ ('About', 'about.html'),
+                                   ('Approach', 'approach.html'),
+                                   ('Projects', 'projects.html') ] %}
+
+                    {#  COMMENTED OUT FOR NOW ('Resources', 'resources.html') ] %} #}
+
                     <div id="main-menu" aria-expanded="false" role="navigation">
                         <div class="menu-holder" data-hidden="lg">
                             <ul>
+                                {% for item in nav %}
                                 <li>
-                                    <a href="about.html">About</a>
+                                    <a href="{{item[1]}}">{{item[0]}}</a>
                                 </li>
-                                <li>
-                                    <a href="approach.html">Approach</a>
-                                </li>
-                                <li>
-                                    <a href="projects.html">Projects</a>
-                                </li>
-                                <li>
-                                    <a href="resources.html">Resources</a>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <!--<div class="cta">
@@ -100,18 +100,11 @@
                             <!-- class: -dotted, -border -->
                             <div class="main-links--border col-12">
                                 <ul>
-                                    <li>
-                                        <a href="about.html">About</a>
+                                    {% for item in nav %}
+                                     <li>
+                                        <a href="{{item[1]}}">{{item[0]}}</a>
                                     </li>
-                                    <li>
-                                        <a href="approach.html">Approach</a>
-                                    </li>
-                                    <li>
-                                        <a href="projects.html">Projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="resources.html">Resources</a>
-                                    </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>

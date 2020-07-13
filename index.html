@@ -27,28 +27,29 @@
                                 <h2>Our Partners</h2>
                             </div>
 
-                            {% set partners = [ {'name': 'Cornell Tech', 'logo': 'cornell-tech.png'},
-                                                {'name': 'Columbia', 'logo': 'columbia-ds.jpg'},
-                                                {'name': 'NYU Tandon', 'logo': 'NYU.png'},
-                                                {'name': 'Queens Public Library', 'logo': 'queens.png'},
-                                                {'name': 'New York Academy of Sciences', 'logo': 'NY-science.gif'},
-                                                {'name': 'Redhook Initiative', 'logo': 'redhook.jpg'},
-                                                {'name': 'NYC Mayor\'s Office of the CTO', 'logo': 'NYC-mayor.png'},
-                                                {'name': 'Lowes\'s Innovation Lab', 'logo': 'lowes.png'},
-                                                {'name': 'NYC EDC', 'logo': 'NYC-EDC.png'},
-                                                {'name': 'Council 38', 'logo': 'council38.png'},
-                                                {'name': 'CARTO', 'logo': 'CARTO.png'},
-                                                {'name': 'NYC DOITT', 'logo': 'NYCDOITT.png'},
-                                                {'name': 'NYC DOT', 'logo': 'NYC-DOT.png'},
-                                                {'name': 'Town+Gown', 'logo': 'NYC-town.png'},
-                                                {'name': 'Public Sentiment', 'logo': 'public-sentiment.png'} ] 
+                            {% set partners = [ 
+                                                {'name': 'Columbia', 'logo': 'columbia-ds.jpg', 'url': 'https://www.datascience.columbia.edu/'},
+                                                {'name': 'NYU Tandon', 'logo': 'NYU.png', 'url': 'https://engineering.nyu.edu/'},
+                                                {'name': 'Queens Public Library', 'logo': 'queens.png', 'url': 'https://www.queenslibrary.org/'},
+                                                {'name': 'New York Academy of Sciences', 'logo': 'NY-science.gif', 'url': 'https://www.nyas.org/'},
+                                                {'name': 'Redhook Initiative', 'logo': 'redhook.jpg', 'url': 'https://rhicenter.org/'},
+                                                {'name': 'Lowes\'s Innovation Lab', 'logo': 'lowes.png', 'url': 'https://www.lowesinnovationlabs.com/'},
+                                                {'name': 'NYC EDC', 'logo': 'NYC-EDC.png', 'url': 'https://edc.nyc/'},
+                                                {'name': 'District 38 - Carlos Menchaca', 'logo': 'council38.png', 'url': 'https://council.nyc.gov/district-38/'},
+                                                {'name': 'NYC DOT', 'logo': 'NYC-DOT.png', 'url': 'http://nyc.gov/dot'},
+                                                {'name': 'Town+Gown', 'logo': 'NYC-town.png', 'url': 'https://www1.nyc.gov/site/ddc/about/town-gown.page'},
+                                                {'name': 'Public Sentiment', 'logo': 'public-sentiment.png', 'url': 'https://www.publicsentiment.org/'},
+                                                {'name': 'AirTable', 'logo': 'airtable.png', 'url': 'https://airtable.com/'},
+                                                {'name': 'The Grid', 'logo': 'the-grid.png', 'url': 'https://urbantechnyc.com/'},
+                                                {'name': 'Company', 'logo': 'company.png', 'url': 'https://company.co/'},
+                                                {'name': 'ConEd', 'logo': 'coned.gid', 'url': 'https://www.coned.com/'} ] 
                             %}
 
                             <div class="logo-element">
                                 <ul>
                                     {% for partner in partners %}
                                     <li>
-                                        <a href=""><img data-unveil src="#" data-src="assets/img/partners/{{partner.logo}}" alt="{{partner.name}}"></a>
+                                        <a target="_blank" href="{{partner.url}}"><img data-unveil src="#" data-src="assets/img/partners/{{partner.logo}}" alt="{{partner.name}}"></a>
                                     </li>
                                     {% endfor %}
                                 </ul>

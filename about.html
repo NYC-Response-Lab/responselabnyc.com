@@ -9,7 +9,7 @@
                         <div class="sectiontitle-element--light">
                             <h1 class="big">About</h1>
                             <p class="lg">The <strong>“NYC Response Lab”</strong> at Cornell Tech is a joint initiative with <strong>CIV:LAB</strong> and the <strong>NYCEDC</strong> to identify community-level COVID-19 related problems and deploy internally-created tech solutions to address them and help New York City people/communities, businesses and agencies recover from the COVID-19 crisis.</p>
-                            <p class="lg">We will improve access (to health, mobility, and other resources) and respond in underserved communities in New York using simple and unconventional tools.</p>
+                            <p class="lg">We improve access (to health, mobility, and other resources) and respond in underserved communities in New York using simple and unconventional tools.</p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
 
                     <div class="row" data-padding="smtop">
                         <!--  Single Team  -->
-                        {% for member in team %}
+                        {% for member in team | sort(attribute="first, last")%}
                         
                         <div data-aos="fade-up" data-margin="xsbottom" class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3">
                             <div class="square-element--overlay">
@@ -107,7 +107,7 @@
                                         <img src="{{member.photo}}" alt="{{member.name}}">
                                         <div class="social">
                                             <ul>
-                                                <li><a href="{{member.linkedin}}" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a target="_blank" href="{{member.linkedin}}" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
                                                 <!--
                                                 <li><a href="#" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i></a></li>
                                                 <li><a href="#"><i class="far fa-envelope"></i></a></li>
