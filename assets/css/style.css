@@ -16211,7 +16211,7 @@ header {
   [class*="fullrow-element"][class*="-image"] [class|="image"] {
     position: relative;
     overflow: hidden;
-    background-position: center center;
+    background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat; }
     @media (max-width: 991px) {
@@ -19756,7 +19756,7 @@ form + .row {
     overflow: hidden;
     pointer-events: none;
     z-index: -2;
-    background-position: center center;
+    background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat; }
     [class|="page-header"] [class*="imagebg"] img,
@@ -20573,8 +20573,9 @@ aside {
 
 [class|="page-header"][class*="agency"], [class|="page-header"][class*="about"] {
   background-size: cover;
-  background-position: 10% center;
-  padding-top: 225px; }
+  background-position: bottom center;
+  /*padding-top: 225px;*/
+  padding-top: 35vh; }
   @media (max-width: 767px) {
     [class|="page-header"][class*="agency"], [class|="page-header"][class*="about"] {
       padding-top: 150px;
