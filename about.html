@@ -113,13 +113,13 @@
 
                     <div class="row" data-padding="smtop">
                         <!--  Single Team  -->
-                        {% for member in team | sort(attribute="first, last")%}
+                        {% for member in site.people | sort(attribute="first_name, last_name")%}
                         
                         <div data-aos="fade-up" data-margin="xsbottom" class="col-12 col-xs-6 col-sm-6 col-md-4 col-lg-3">
                             <div class="square-element--overlay">
                                 <div class="info">
                                     <div class="image">
-                                        <img src="{{member.photo}}" alt="{{member.name}}">
+                                        <img src="{{member.picture[0].url}}" alt="{{member.name}}">
                                         <div class="social">
                                             <ul>
                                                 <li><a target="_blank" href="{{member.linkedin}}" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
@@ -131,7 +131,7 @@
                                         </div>
                                     </div>
                                     <div class="text">
-                                        <h6>{{member.name}}</h6>
+                                        <h6>{{member.first_name}} {{member.last_name}}</h6>
                                         <p>{{member.affiliation}}</p>
                                     </div>
                                 </div>

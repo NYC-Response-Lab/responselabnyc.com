@@ -27,29 +27,11 @@
                                 <h2>Our Partners</h2>
                             </div>
 
-                            {% set partners = [ 
-                                                {'name': 'Columbia', 'logo': 'columbia-ds.jpg', 'url': 'https://www.datascience.columbia.edu/'},
-                                                {'name': 'NYU Tandon', 'logo': 'NYU.png', 'url': 'https://engineering.nyu.edu/'},
-                                                {'name': 'Queens Public Library', 'logo': 'queens.png', 'url': 'https://www.queenslibrary.org/'},
-                                                {'name': 'New York Academy of Sciences', 'logo': 'NY-science.gif', 'url': 'https://www.nyas.org/'},
-                                                {'name': 'Redhook Initiative', 'logo': 'redhook.jpg', 'url': 'https://rhicenter.org/'},
-                                                {'name': 'Lowes\'s Innovation Lab', 'logo': 'lowes.png', 'url': 'https://www.lowesinnovationlabs.com/'},
-                                                {'name': 'NYC EDC', 'logo': 'NYC-EDC.png', 'url': 'https://edc.nyc/'},
-                                                {'name': 'District 38 - Carlos Menchaca', 'logo': 'council38.png', 'url': 'https://council.nyc.gov/district-38/'},
-                                                {'name': 'NYC DOT', 'logo': 'NYC-DOT.png', 'url': 'http://nyc.gov/dot'},
-                                                {'name': 'Town+Gown', 'logo': 'NYC-town.png', 'url': 'https://www1.nyc.gov/site/ddc/about/town-gown.page'},
-                                                {'name': 'Public Sentiment', 'logo': 'public-sentiment.png', 'url': 'https://www.publicsentiment.org/'},
-                                                {'name': 'AirTable', 'logo': 'airtable.png', 'url': 'https://airtable.com/'},
-                                                {'name': 'The Grid', 'logo': 'the-grid.png', 'url': 'https://urbantechnyc.com/'},
-                                                {'name': 'Company', 'logo': 'company.png', 'url': 'https://company.co/'},
-                                                {'name': 'ConEd', 'logo': 'coned.gif', 'url': 'https://www.coned.com/'} ] 
-                            %}
-
                             <div class="logo-element">
                                 <ul>
-                                    {% for partner in partners %}
+                                    {% for partner in site.partners | sort (attribute='name') %}
                                     <li>
-                                        <a target="_blank" href="{{partner.url}}"><img data-unveil src="#" data-src="assets/img/partners/{{partner.logo}}" alt="{{partner.name}}"></a>
+                                        <a target="_blank" href="{{partner.url}}"><img data-unveil src="#" data-src="{{partner.logo[0].url}}" alt="{{partner.name}}"></a>
                                     </li>
                                     {% endfor %}
                                 </ul>
