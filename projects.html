@@ -55,7 +55,7 @@
         
                     <div class="row" data-padding="xstop">
 
-                        {% for project in site.projects | sort (attribute='priority, name') %}
+                        {% for project in site.projects | selectattr("priority", ">", 0) | sort (attribute='priority, name') %}
                         <!--  Single Article  -->
                         <div data-aos="fade" data-aos-delay="100" class="col-12 col-md-4">
                             <article class="rectangle-element--article--boxed--shadow">
