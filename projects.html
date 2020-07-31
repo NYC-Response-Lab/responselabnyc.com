@@ -61,7 +61,7 @@
                             <article class="rectangle-element--article--boxed--shadow">
                                 <div class="info">
                                     <div class="image">
-                                        <img src="{{project.picture[0].url if project.picture else 'assets/img/projects/default.png' }}" alt="{{project.name}}">
+                                        <img src="{{'/assets/img/projects/' + project.picture[0].filename if project.picture else 'assets/img/projects/default.png' }}" alt="{{project.name}}">
                                     </div>
                                     <div class="text">
                                         <h3>{{project.name}}</h3>

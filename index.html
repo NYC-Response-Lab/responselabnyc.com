@@ -31,7 +31,7 @@
                                 <ul>
                                     {% for partner in site.partners | sort (attribute='name') %}
                                     <li>
-                                        <a target="_blank" href="{{partner.url}}"><img data-unveil src="#" data-src="{{partner.logo[0].url}}" alt="{{partner.name}}"></a>
+                                        <a target="_blank" href="{{partner.url}}"><img data-unveil src="#" data-src="/assets/img/partners/{{partner.logo[0].filename}}" alt="{{partner.name}}"></a>
                                     </li>
                                     {% endfor %}
                                 </ul>
