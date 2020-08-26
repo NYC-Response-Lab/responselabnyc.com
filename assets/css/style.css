@@ -20821,7 +20821,8 @@ footer[data-bg="dark"] [class*="social-element"][class*="round"][class*="small"]
   margin-bottom: 40px;
 }
 .projects .info {
-  min-height: 440px;
+  min-height: 550px;
+  max-height: 550px;
 }
 .resources section h2,
 .projects h3 {
