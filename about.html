@@ -23,7 +23,7 @@
             <section data-padding="top">
                 <div class="container">
 
-                    <div data-aos="fade" class="row">
+                    <div data-aos="fade" class="row justify-content-center">
                         <div class="col-12">
                             <div class="sectiontitle-element--center">
                                 <h2 class="toptitle--primary">Co-Founders</h2>
@@ -56,7 +56,7 @@
 </div>
 {% endmacro %}
 
-                    <div class="row" data-padding="smtop">
+                    <div class="row justify-content-center" data-padding="smtop">
                         <!--  Single Team  -->
                         {% for member in site.people | selectattr('priority', 'equalto', 0) | sort(attribute="first_name, last_name")%}
                         {{ display_person(member) }}
@@ -64,7 +64,7 @@
  
                     </div>
 
-                    <div data-aos="fade" class="row">
+                    <div data-aos="fade" class="row justify-content-center">
                         <div class="col-12">
                             <div class="sectiontitle-element--center">
                                 <h2 class="toptitle--primary">The Team</h2>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
 
-                    <div class="row" data-padding="smtop">
+                    <div class="row justify-content-center" data-padding="smtop">
                         <!--  Single Team  -->
                         {% for member in site.people | selectattr('priority', 'equalto', 1) | sort(attribute="last_name, first_name")%}
                         {{ display_person(member) }}                        
@@ -80,7 +80,7 @@
  
                     </div>
 
-                    <div data-aos="fade" class="row">
+                    <div data-aos="fade" class="row justify-content-center">
                         <div class="col-12">
                             <div class="sectiontitle-element--center">
                                 <h2 class="toptitle--primary">Advisors</h2>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="row" data-padding="smtop">
+                    <div class="row justify-content-center" data-padding="smtop">
                         <!--  Single Team  -->
                         {% for member in site.people | selectattr('priority', 'equalto', 2) | sort(attribute="last_name, first_name")%}
                         {{ display_person(member) }}                        
