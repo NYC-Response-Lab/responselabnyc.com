@@ -20700,6 +20700,62 @@ footer[data-bg="dark"] [class*="social-element"][class*="round"][class*="small"]
 /*-------------------------------------------------*/
 
 /*------ Custom Styles ------*/
+
+/* Media Queries For Approach Page */
+@media screen and (max-width: 990px) {
+  .approach section {
+    margin-bottom: 4rem !important;
+  }
+  .approach .col-12 {
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5;
+  }
+  .approach section .container {
+    max-width: 100%;
+    padding: 0 40px !important;
+  }
+  .approach section .container .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 5;
+  }
+  .approach section .container .row .approach-icon {
+    position: static !important;
+    text-align: center !important;
+  }
+  .approach h5 {
+    text-align: center !important;
+  }
+  .approach .text {
+    padding: 0 !important;
+  }
+  .approach ul {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+  .approach .text.color2,
+  .approach .text.color4,
+  .approach .text.color6 {
+    margin: 0 !important;
+  }
+  .approach:after {
+    border-left: 5px dotted rgba(255,255,255,0.15) !important;
+    bottom: 32rem !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .approach:after {
+    bottom: 42rem !important;
+    border-left: 5px dotted rgba(255,255,255,0.10) !important;
+  }
+  .approach ul {
+    width: 90% !important;
+  }
+}
+
 .approach {
   background-color: #084685;
   color: #fff;
@@ -20820,6 +20876,7 @@ footer[data-bg="dark"] [class*="social-element"][class*="round"][class*="small"]
 
 .approach .text h5 {
   margin-bottom: 20px;
+  padding-right: 20px;
   font-weight: 900;
   text-align: left;
 }
