@@ -1,6 +1,142 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block page_content %}
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172902940-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172902940-1');
+</script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" />
+
+    <title>
+        NYC Response Lab
+    </title>
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="theme-color" content="#000" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="NYC Response Lab" />
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" href="assets/img/favicon.png" type="image/png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="/" />
+
+    <!-- Open Graph -->
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="NYC Response Lab" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!--  Main Wrap  -->
+    <div id="main-wrap">
+
+        <!--  Header & Menu  -->
+        <!--  class: fixed, bg, white, transparent  -->
+        <header id="header" class="transparent--fixed">
+            <!--  padding-sm, padding-md, padding-lg  -->
+            <div class="wrap-header--padding-lg">
+                <nav class="main-navigation">
+                    <!--  Header Logo  -->
+                    <!--  class: height-sm, height-md, height-lg  -->
+                    <div id="logo" class="height-lg">
+                        <a class="navbar-brand" href="./">
+                            <picture class="light">
+                                <img src="assets/img/logo_bicolor.svg" alt="NYC Response Lab">
+                            </picture>
+                            <picture class="colored">
+                                <img src="assets/img/logo_bicolor_light.svg" alt="NYC Response Lab">
+                            </picture>
+                        </a>
+                    </div>
+                    <!--  END Header Logo  -->
+                    <!--  Menu  -->
+
+                    <div id="main-menu" aria-expanded="false" role="navigation">
+                        <div class="menu-holder" data-hidden="lg">
+                            <ul>
+                                
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="approach.html">Approach</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="projects.html">Projects</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!--<div class="cta">
+                            <a href="#" class="btn--medium--round--border">contact us</a>
+                        </div>-->
+                        <div class="menu-button" data-visible="lg">
+                            <div class="icons">
+                                <span class="bar bar-1"></span>
+                                <span class="bar bar-2"></span>
+                                <span class="bar bar-3"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mobile-menu" data-visible="lg" aria-expanded="false" role="navigation">
+                        <!-- class: -bg -->
+                        <div class="mobile-wrap">
+                            <!-- class: -dotted, -border -->
+                            <div class="main-links--border col-12">
+                                <ul>
+                                    
+                                     <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    
+                                     <li>
+                                        <a href="approach.html">Approach</a>
+                                    </li>
+                                    
+                                     <li>
+                                        <a href="projects.html">Projects</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  END Menu  -->
+                </nav>
+            </div>
+        </header>
+        <!--  END Header & Menu  -->
+
+
+        
 
         <div class="page-header--agency" data-padding data-bg="template" style="background-image:url('./assets/img/splash.jpg'); background-size: cover;">
             <div class="container">
@@ -198,4 +334,48 @@
             <!--  END Approach Diagram Right  -->
         </div>
         <!--  END Page Content  -->
-{% endblock %}
+
+        
+        <!--  Footer  -->
+        <footer id="footer" data-aos="fade" style="background-color: #21a6df; color: #fff;">
+            <div class="container">
+                <div class="row main-wrapper">
+                    <div class="col-12 col-md-12">
+                        <div class="logo-footer" style="width: 100%; margin: 0 auto;text-align:center;">
+                            <!-- -small, -medium, -big -->
+                            <img class="image" src="assets/img/Logos_White_Footer.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright" style="text-align: center; color: rgba(255,255,255,0.65);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="font-size: 1.15em; margin: 25px auto; color: rgba(255,255,255,0.65);">© 2020 NYC Response Lab. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--  END Footer  -->
+    </div>
+    <!--  Main Wrap  -->
+    <!--  Scripts  -->
+    <script src="assets/js/jquery.min.js "></script>
+    <script src="assets/js/jquery.unveil.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/elements.js"></script>
+    <script src="assets/js/masonry.js"></script>
+    <script src="assets/js/form.js"></script>
+    <!--  END Scripts  -->
+</body>
+
+</html>
