@@ -2,8 +2,8 @@
 Content + script for http://responselabnyc.com/ website.
 
 # To build the site
-* make sure `_site` folder exists
-* make sure it contains a link to `assets`
+* make sure `_site` folder exists (create locally if needed; DO NOT put it on github)
+* make sure it contains a link to `assets` (create a symolic link if needed (`ln -s ../assets .`); DO NOT put it on gihub)
 * from the top folder, run `python build_site.py`
 
 # To add text content to a page
